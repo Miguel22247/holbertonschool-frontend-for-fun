@@ -660,14 +660,7 @@
         font-variant: small-caps;
       }
 
-      fieldset {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border: none;
-        padding: 0 0 2rem;
-      }
-      
+     
       /* Basic form
           ============================= */
       
@@ -676,4 +669,12 @@
         flex-direction: column;
         padding: 1rem 0;
         margin: 0;
+      }
+
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border: none;
+        padding: 0 0 2rem;
       }

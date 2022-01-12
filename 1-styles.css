@@ -1,3 +1,8 @@
+:root {
+  --color: #8A153A;
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -11,13 +16,13 @@ h2 {
 
 a {
     text-decoration: none;
-    color: #8A153A;
+    color: var(--color);
 }
 
 a::before {
   content: "";
   position: absolute;
-  background: #8A153A;
+  background: var(--color);
   height: 3px;
   width: 0;
   transform: translateY(2.2ex);

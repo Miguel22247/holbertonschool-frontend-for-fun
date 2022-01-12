@@ -1,9 +1,61 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+:root {
+	--switch-size: 40px;
+    --border-color: rgb(177, 177, 177);
+    --background-color: rgb(235,235,235);
+    --inner-text-color: rgb(124, 124, 124);
+    --bg-checked: rgb(225,1,60);
+    --checked-text-color: rgb(255, 255, 255);
+}
 
-input {
-    border-radius: 50%;
+.toggle {
+ transform: translateX(100px);
+ display: flex;
+}
+.toggle-label {
+	position: relative;
+}
+
+.toggle-inner {
+	width: calc(var(--switch-size) * 2 );
+	height: 30px;
+	border: 2px solid var(--border-color);
+	background: var(--background-color);
+	border-radius: 30px;
+	color: var(--inner-text-color);
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+	background: var(--bg-checked);
+	color: var(--checked-text-color);
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+	transform: translateX( calc(var(--switch-size) * 1 ) ) translateY( calc(var(--switch-size) * -1 ));
+}
+
+.toggle-switch {
+	width: var(--switch-size);
+	height: var(--switch-size);
+	border: 2px solid darkgray;
+	background: var(--checked-text-color);
+	border-radius: 50%;
+	position: absolute;
+	transform: translateY( calc(var(--switch-size) * -1 ));
+}
+
+.toggle-inner::before {
+	content: "Yes";
+}
+
+.toggle-inner::after {
+	content: "No";
+}
+
+.toggle-cb {
+	display: none;
 }

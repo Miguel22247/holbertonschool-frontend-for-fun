@@ -38,8 +38,8 @@
 	font-size: 1rem;
 	border-radius: 50%;
 	background-color: var(--is-red);
-	height: var(--circle-size);
 	width: var(--circle-size);
+	height: var(--circle-size);
 	margin-bottom: 5px;
 }
 
